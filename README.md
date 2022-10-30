@@ -8,11 +8,13 @@ If you have any issues or comments on the project, contact me on Linkedin (https
 
 # Contents:
 
-[Insight about the project](#Insight about the project "Goto Insight about the project:")
-
-[References](#References "Goto References:")
-
-[heading-1](#heading-1 "Goto heading-1")
+* [Insight about the project](#Insight-about-the-project "Goto Insight about the project:")
+* [Theoretical Background](#Theoretical-Background "Goto Theoretical Background:")
+* [Implementation Results](#Implementation-Results "Goto Implementation Results:")
+* [Algorithms Implementation](#Algorithms-Implementation "Goto Algorithms Implementation:")
+* [Monte Carlo Simulation](#Monte-Carlo-Simulation "Goto Monte Carlo Simulation:")
+* [Conclusion](#Conclusion "Goto Conclusion")
+* [References](#References "Goto References:")
 
 # Insight about the project:
 
@@ -174,7 +176,6 @@ Looking at Figures 19 and 20, one can say that A* is the optimal algorithm that 
 Before moving on to the next section, in order to show the path to the solution, I create a function called 'reconstruct path' that takes the final node and returns the path, as shown in Figure 21.
 
 ![image](https://user-images.githubusercontent.com/87785000/198879036-09398ec8-b864-4a30-8b23-c659c4631e5e.png)
-
 
 # Monte Carlo Simulation:
 This part shows the simulation with a different generated number of puzzles with a specific move away from the goal state for each function.
