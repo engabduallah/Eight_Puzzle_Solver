@@ -168,15 +168,74 @@ Before moving on to the next section, in order to show the path to the solution,
 ![image](https://user-images.githubusercontent.com/87785000/198879036-09398ec8-b864-4a30-8b23-c659c4631e5e.png)
 
 
+# Monte Carlo Simulation:
+This part shows the simulation with a different generated number of puzzles with a specific move away from the goal state for each function.
+
+In order to generate a random number of puzzles, I create a function called 'Monte Carlo' that takes the required number of puzzles and the maximum depth of the tree, which represents the movements away from the goal, as shown in Figure 22. 
+
+Also, for generating the state of the puzzles, another function called 'State Generator' takes the maximum depth and returns different states, as shown in Figure 23.
+These two functions let the user test each algorithm with the number of puzzles wanted. 
+
+![image](https://user-images.githubusercontent.com/87785000/198881559-62960a67-fe41-4626-bbe7-d5cee5324250.png)
+
+![image](https://user-images.githubusercontent.com/87785000/198881564-a48a15e2-c55d-4c79-b2d3-cbcdad481a7c.png)
+
+## Example of Monte Carla Simulation: 
+For example, if the user chooses the movement number away from the goal state with 50 puzzles and selects the BFS algorithm, the simulation result is shown in Figure 24.
+
+It can be seen from Figure 24 that the movement numbers are correct, and the total Time is almost correct according to the knowledge we know about the BFS algorithm. 
+The following section shows the results for running all algorithms for 100 puzzles that are each four of them is starting from five movements to thirty movements from the goal state. 
+
+![image](https://user-images.githubusercontent.com/87785000/198881609-99823a75-6d0d-431e-8e2e-975a2bf5779d.png)
+
+## Monto Carla for 100 Puzzle:
+The results are shown in two formats to obtain a clear understating of each advantage and disadvantage of the algorithm. 
+The first format is the histogram that shows nodes usage, total time, and memory usage for each algorithm, as shown in Figure 25. 
+
+It can be seen from Figure 25 that for memory usage, A* may not be the best compering to the other algorithms, but for the total time, A* seems to be the fastest among the others. 
+
+One can conclude that the A* algorithm is preferred due to its completeness, optimality, and optimal efficiency, but one drawback is that it stores all generated nodes in memory.
+
+Also, looking carefully in the Figure, we can see that almost IDS takes the same time as that of DFS and BFS, but it is slower than both of them as it has a higher constant factor in its time complexity expression. Thus, IDS can be the best suited for a complete infinite tree.
+
+![image](https://user-images.githubusercontent.com/87785000/198881662-949e74c8-8624-48fe-8ce4-e17661eae1a3.png)
+
+The second format is a plot that X-axis represents the true distance away from the goal state. There are average time and nodes usage for each algorithm on the plot, as shown in Figure 26. 
+
+Figure 26 also indicates what we discussed before that the A* search algorithm seems to be the fastest among the others. However, its node usage can be high.
+Also, we can see that the BFS for a smaller number of movements ineffectively uses the memory to have that disadvantage. 
+
+![image](https://user-images.githubusercontent.com/87785000/198881712-0541bbc4-9530-41a1-8c0d-5718b7e59b85.png)
 
 
+**Overall, from the graph, we can see that the algorithm's performance depends on many factors, not only the time but also the memory usage and nodes stored. In the end, we may have the optimal solution in one algorithm, but for sure, we are trading something for something. For example, in the case of A*, we are trading the optimality with the memory storage. In fact, it mainly depends on which application we are going to use the algorithm in.**
 
 
+# Conclusion
 
+To sum up, this project builds the seed to understand the fundamental AI algorithms that can be extended to any field or application.
+In the first part, I learned a new feature in MATLAB to build tree data to keep track of the algorithms' states. 
+In the second part, I learned more about the App Designer from MATLAB that helps me build the GUI to facilities the implementation of each algorithm. The GUI has three different tabs. The first is to solve the puzzle, the second is to perform a Monto Carlo simulation based on entered numbers by the user, and the third is to perform the Monto Carli simulation over 100 puzzles.
+The third part mainly was about implanting each algorithm using a given initial state and observing the performance of each one, and the table below summarizes them: 
 
+![image](https://user-images.githubusercontent.com/87785000/198881761-f6241dc3-8307-4c62-a7c5-88c7cb0f9ce6.png)
 
+The table shows that the optimal path is with 13 moves done by BFS and IDS, which just works for this case. That is, each situation and application needs to be tested with all algorithms to decide which one is the best.
 
+The last part shows the simulation results for Monto Carlo over 100 puzzles with 25 different distances away from the goal state. This part aims mainly to conduct a comprehensive study on the performance of each algorithm. The results show that A* star is preferred due to its optimality, but one needs to trade off the memory usage. 
 
+In the end, this project let me understand this algorithm deeply to come up with conclusions that we need to study the filed or application requirement before deciding which algorithm is the best.  One algorithm may give the best result in one field, but in another field may give the worst. 
+Also, this assignment gave a real insight into how the algorithm works in the background and which performance term should pay attention to measure the algorithm's efficiency. 
+
+# References
+This part shows all the references that I cite any information from it: 
+
+* BrainKart. (n.d.). Depth-first search (DFS): Concept, implementation, advantages, disadvantages. https://www.brainkart.com/article/Depth-First-Search-(DFS)--Concept,-Implementation,-Advantages,-Disadvantages_8877/
+* Geeks. (2016, December 22). Iterative deepening Search(IDS) or iterative deepening depth first Search(IDDFS). GeeksforGeeks. https://www.geeksforgeeks.org/iterative-deepening-searchids-iterative-deepening-depth-first-searchiddfs/
+* NPTEL. (2014). Artificial Intelligence: Search Methods for Problem Solving. National Programme on Technology Enhanced Learning. https://www.rnlkwc.ac.in/pdf/study-material/comsc/Ai.pdf
+* Sadik, Adil, Dhali, Maruf, A., Farid, Hasib, Rashid, Tafhim, Syed, & Anas. (2010, November 24). A comprehensive and comparative study of maze-solving techniques by implementing graph theory 52 - 56. ResearchGate. https://doi.org/10.1109/AICI.2010.18 
+* Techiedelight. (2021, November 6). Depth-first search (DFS) – Iterative and recursive implementation. Techie Delight. https://www.techiedelight.com/depth-first-search/
+* Walker, A. (2021, November 1). Breadth first search (BFS) algorithm with example. Guru99. https://www.guru99.com/breadth-first-search-bfs-graph-example.html#2
 
 
 
