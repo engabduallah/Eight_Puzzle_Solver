@@ -2,9 +2,17 @@
 
 ![image](https://user-images.githubusercontent.com/87785000/126638319-ed14d9b4-b687-4ec3-b871-fe6bb7122316.png)
 
-This Project is done by Eng. Abduallah Damash, and assigned to me by Asst. Prof. Dr. Meryem Erbilek as part of CNG483 (Int. to Comp. Vision) course.
+This Project is done by Eng. Abduallah Damash, and assigned to me by Prof. Afşar Saranlı as part of EE586 Artificial Intelligence course.
 
 If you have any issues or comments on the project, contact me on Linkedin (https://www.linkedin.com/in/engabduallah).
+
+# Contents:
+
+[Insight about the project](#Insight about the project "Goto Insight about the project:")
+
+[References](#References "Goto References:")
+
+[heading-1](#heading-1 "Goto heading-1")
 
 # Insight about the project:
 
@@ -227,7 +235,7 @@ The last part shows the simulation results for Monto Carlo over 100 puzzles with
 In the end, this project let me understand this algorithm deeply to come up with conclusions that we need to study the filed or application requirement before deciding which algorithm is the best.  One algorithm may give the best result in one field, but in another field may give the worst. 
 Also, this assignment gave a real insight into how the algorithm works in the background and which performance term should pay attention to measure the algorithm's efficiency. 
 
-# References
+# References:
 This part shows all the references that I cite any information from it: 
 
 * BrainKart. (n.d.). Depth-first search (DFS): Concept, implementation, advantages, disadvantages. https://www.brainkart.com/article/Depth-First-Search-(DFS)--Concept,-Implementation,-Advantages,-Disadvantages_8877/
