@@ -113,3 +113,71 @@ The tab shows the results in two formats: the histogram for average node usages,
 
 ## Algorithms Implementation:
 This part discusses the implementation of each algorithm using as initial state the configuration shown in Figure 6. Each function returns four outputs: total Time,  total nodes used, total memory used, and total movements number.
+
+The code tried to implement the flowchart of the algorithm carefully by using the appropriate built-in function in MATLAB.
+
+### Breadth-First Search (BFS) Implementation: 
+In order to implement the algorithm, I created a function called 'BFS' that receives the initial states and returns the performance output, as shown in Figure 10. rest of the code in the appendix.
+
+![image](https://user-images.githubusercontent.com/87785000/198878752-c84cd5eb-3504-442e-8617-f72896fbf2e5.png)
+
+After running the algorithm on the initial state asked in the assignment, the simulation result is shown in Figure 11. As shown in Figure 11, the number of nodes is high as the algorithm stores all the trees, overloading the memory spaces as expected. Also, it finds the solution fast as it takes only 0.82 milliseconds. 
+
+![image](https://user-images.githubusercontent.com/87785000/198878792-3d8ce3e6-c25c-46fb-9b40-7da764981ca7.png)
+
+### Depth-First Search (DFS) Implementation: 
+In order to implement the algorithm, I created a function called 'DFS' that receives the initial states and returns the performance output, as shown in Figure 12. rest of the code in the appendix.
+
+The problem in implementing this algorithm is that the depth of the tree is not known and is unpredictable, so to overcome this issue, I assumed that any goal state could be reached before the 81st depth, so it stops looking down a branch past the 81st level.
+
+![image](https://user-images.githubusercontent.com/87785000/198878841-c1bca73c-346c-49bf-a12c-a5f1c53de78a.png)
+
+After running the algorithm on the initial state asked in the assignment, the simulation result is shown in Figure 13. As shown in Figure 13, the number of the nodes is less than in BFS as the algorithm stores all the tree nodes vertically, explained before. However, as it goes into all the tree's depth, it consumes a huge amount of time as it is 77.9 milliseconds.
+
+![image](https://user-images.githubusercontent.com/87785000/198878862-a9743910-76d2-46a4-afcf-563dd3ff58b9.png)
+
+### Iterative Deepening Search (IDS) Implementation: 
+In order to implement the algorithm, I created a function called 'IDS' that receives the initial states and returns the performance output, as shown in Figure 14. rest of the code in the appendix.
+
+Also, in order to save time, I used the built-in stack structure to store the data instead of the tree structure, as shown in Figure 15.
+
+![image](https://user-images.githubusercontent.com/87785000/198878890-83dd9b9b-6e1a-438e-a134-52da696c06c7.png)
+
+![image](https://user-images.githubusercontent.com/87785000/198878905-6338f80a-f2af-4abb-9dd1-6dbe8149cfcc.png)
+
+After running the algorithm on the initial state asked in the assignment, the simulation result is shown in Figure 16. As shown in Figure 16, the number of the nodes is increasing compared to  BFS and DFS as the algorithm explores until a maximum depth, which overloads the memory. However, as it goes into all the depth layer by layer, it consumes less time than DFS as it is 0.88 milliseconds.
+
+![image](https://user-images.githubusercontent.com/87785000/198878937-dfd1db24-8562-4841-b2fb-01c8c705535e.png)
+
+### A* Search Implementation: 
+In order to implement the algorithm, I created a function called 'A_star' that receives the initial states and returns the performance output, as shown in Figure 17. rest of the code in the appendix.
+Also, to implement the admissible heuristic function that contains the Manhattan distance and misplaced tiles, I created a function called 'heuristic' that takes the state and distance select and returns the cost, as shown in Figure 18.
+
+![image](https://user-images.githubusercontent.com/87785000/198878961-102c6f8a-770c-407d-a535-3ef6a81db35c.png)
+
+![image](https://user-images.githubusercontent.com/87785000/198878971-8813491a-02ce-4ab2-97ee-70df34da5ae9.png)
+
+After running the algorithm on the initial state asked in the assignment, the simulation result is shown in Figure 19 for misplaced tiles as heuristic function and Figure 20 for Manhattan distance as heuristic function. 
+Looking at Figures 19 and 20, one can say that A* is the optimal algorithm that finds the solution very fast. However, it stores many nodes, which is the disadvantage of this algorithm. Also, using Manhattan distance as a heuristic enhances the node's usages as it estimates cost-efficiently.
+
+![image](https://user-images.githubusercontent.com/87785000/198879017-3af3dbde-50e1-404b-87bd-9657509d7ceb.png)
+
+![image](https://user-images.githubusercontent.com/87785000/198879020-604ed1b6-70c0-4a00-b108-1654b83584b2.png)
+
+Before moving on to the next section, in order to show the path to the solution, I create a function called 'reconstruct path' that takes the final node and returns the path, as shown in Figure 21.
+
+![image](https://user-images.githubusercontent.com/87785000/198879036-09398ec8-b864-4a30-8b23-c659c4631e5e.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
