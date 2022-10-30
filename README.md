@@ -110,13 +110,12 @@ The tab shows the results in two formats: the histogram for average node usages,
 ![image](https://user-images.githubusercontent.com/87785000/198878582-a5794904-94aa-42ee-ba62-cb91a544952a.png)
 
 
-
-## Algorithms Implementation:
+# Algorithms Implementation:
 This part discusses the implementation of each algorithm using as initial state the configuration shown in Figure 6. Each function returns four outputs: total Time,  total nodes used, total memory used, and total movements number.
 
 The code tried to implement the flowchart of the algorithm carefully by using the appropriate built-in function in MATLAB.
 
-### Breadth-First Search (BFS) Implementation: 
+## Breadth-First Search (BFS) Implementation: 
 In order to implement the algorithm, I created a function called 'BFS' that receives the initial states and returns the performance output, as shown in Figure 10. rest of the code in the appendix.
 
 ![image](https://user-images.githubusercontent.com/87785000/198878752-c84cd5eb-3504-442e-8617-f72896fbf2e5.png)
@@ -125,7 +124,7 @@ After running the algorithm on the initial state asked in the assignment, the si
 
 ![image](https://user-images.githubusercontent.com/87785000/198878792-3d8ce3e6-c25c-46fb-9b40-7da764981ca7.png)
 
-### Depth-First Search (DFS) Implementation: 
+## Depth-First Search (DFS) Implementation: 
 In order to implement the algorithm, I created a function called 'DFS' that receives the initial states and returns the performance output, as shown in Figure 12. rest of the code in the appendix.
 
 The problem in implementing this algorithm is that the depth of the tree is not known and is unpredictable, so to overcome this issue, I assumed that any goal state could be reached before the 81st depth, so it stops looking down a branch past the 81st level.
@@ -136,7 +135,7 @@ After running the algorithm on the initial state asked in the assignment, the si
 
 ![image](https://user-images.githubusercontent.com/87785000/198878862-a9743910-76d2-46a4-afcf-563dd3ff58b9.png)
 
-### Iterative Deepening Search (IDS) Implementation: 
+## Iterative Deepening Search (IDS) Implementation: 
 In order to implement the algorithm, I created a function called 'IDS' that receives the initial states and returns the performance output, as shown in Figure 14. rest of the code in the appendix.
 
 Also, in order to save time, I used the built-in stack structure to store the data instead of the tree structure, as shown in Figure 15.
@@ -149,7 +148,7 @@ After running the algorithm on the initial state asked in the assignment, the si
 
 ![image](https://user-images.githubusercontent.com/87785000/198878937-dfd1db24-8562-4841-b2fb-01c8c705535e.png)
 
-### A* Search Implementation: 
+## A* Search Implementation: 
 In order to implement the algorithm, I created a function called 'A_star' that receives the initial states and returns the performance output, as shown in Figure 17. rest of the code in the appendix.
 Also, to implement the admissible heuristic function that contains the Manhattan distance and misplaced tiles, I created a function called 'heuristic' that takes the state and distance select and returns the cost, as shown in Figure 18.
 
